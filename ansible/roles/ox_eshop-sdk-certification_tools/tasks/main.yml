@@ -6,7 +6,7 @@
   shell: cd {{ eshop.sdk.path }}/module_certification_tools/ && composer install
 
 - name: Place module certification tools shortcut
-  template: src=ox_cert dest={{ eshop.sdk.path }}/bin/ox_cert mode=0755
+  template: src=ox_cert dest="{{ eshop.sdk.path }}/bin/ox_cert" mode=0755
 
 - name: Add information about module certification tools shortcut
   shell: "echo 'ox_cert - Module certification tools' >> {{ eshop_sdk_info_file }}"
