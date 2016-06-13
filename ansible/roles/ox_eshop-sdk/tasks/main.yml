@@ -12,7 +12,7 @@
   shell: "echo ''> {{ eshop_sdk_info_file }}"
 
 - name: Place SDK commands lister
-  template: src=ox_sdk_list dest={{ eshop.sdk.path }}/bin/ox_sdk_list mode=0755
+  template: src=ox_sdk_list dest="{{ eshop.sdk.path }}/bin/ox_sdk_list" mode=0755
 
 - name: Add information about module certification tools shortcut
   shell: "echo 'ox_sdk_list - Display SDK shortcut list' >> {{ eshop_sdk_info_file }}"
